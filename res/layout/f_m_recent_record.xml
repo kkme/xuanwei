@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- 近期战绩 -->
+    <RadioGroup android:id="@id/rg_group_m"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" android:scrollbars="none">
+        <RadioButton android:id="@id/rbtn_title_0" style="@style/rb_choose" android:text="上海申鑫近期战绩" android:checked="true"/>
+        <RadioButton  android:id="@id/rbtn_title_1" style="@style/rb_choose" android:text="上海申鑫近期战绩" />
+    </RadioGroup>
+    <include layout="@layout/f_m_title_head" />
+   <include layout="@layout/public_listview_n" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="left_menu_bg0">#005087</color><!--左菜单背景色 -->
+
+    <color name="left_list_fc">#ff014002</color><!-- 左边listview item 颜色 -->
+    <color name="left_menu_divider">#ff023c00</color><!-- 左边listview item 颜色 -->
+    <color name="team_title_fc">#ff1a9603</color><!-- 一线阵容  title  颜色 -->
+    <color name="spinner_item_bg">#ff0d050d</color>
+
+    <color name="red">#ffd10108</color>
+    <color name="yellow">#ffe3e11e</color>
+    <color name="greed">#ff06b50a</color>
+</resources>

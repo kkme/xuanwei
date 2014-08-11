@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">football</string>
+
+    <string name="app_title_name">上海申鑫</string>
+    <!-- 菜单 -->
+    <string name="left_menu_1">赛事直播</string>
+    <string name="left_menu_2">新闻/公告</string>
+    <string name="left_menu_3">赛程</string>
+    <string name="left_menu_4">俱乐部</string>
+    <string name="left_menu_5">球队阵容</string>
+
+    <!--标题 -->
+    <string name="title_shouye">首页</string>
+    <string name="title_matchanalysis">赛事分析</string>
+    <string name="title_explain">实力对比</string>
+    <string name="title_a_team">一线阵容</string>
+    <string name="title_coaching">教练组</string>
+    <string name="title_player_ranking">球员排行</string>
+
+    <string name="title_first_list">首发名单</string>
+    <string name="title_live_starting">首发</string>
+    <string name="title_lanqiu">实况数据</string>
+    <string name="title_live_data">文字直播</string>
+
+
+    <!-- 赛事分析  选择 -->
+    <string name="rb_choose_1">进攻对比</string>
+    <string name="rb_choose_2">防守对比</string>
+    <string name="rb_choose_3">常规对比</string>
+    <string name="round">轮次：第%1$s轮</string>
+
+    <string name="rb_tab_1">交战历史</string>
+    <string name="rb_tab_2">实力对比</string>
+    <string name="rb_tab_3">近期战绩</string>
+    <string name="rb_tab_4">积分榜</string>
+
+    <string name="vs">双方历史共交战12次，申鑫胜4次 平五次 负三次</string>
+    <string name="title_event">赛事</string>
+    <string name="title_season">赛季</string>
+    <string name="title_round">轮次</string>
+    <string name="title_date">日期</string>
+    <string name="title_time">时间</string>
+    <string name="title_home_court">主场</string>
+    <string name="title_visiting_court">客场</string>
+    <string name="title_home_team">主队</string>
+    <string name="title_visiting_team">客队</string>
+    <string name="title_score">比分</string>
+
+    <string name="title_ranking">排行</string>
+    <string name="title_team">球队</string>
+    <string name="title_ronda">场次</string>
+    <string name="title_win">胜</string>
+    <string name="title_flat">平</string>
+    <string name="title_defeat">负</string>
+    <string name="title_jinshiqiu">进/失球</string>
+    <string name="title_integral">积分</string>
+
+    <string name="title_regular">常规</string>
+    <string name="title_attack">进攻</string>
+    <string name="title_defend">防守</string>
+    <string name="title_stamina">体能</string>
+    <string name="title_appear">出场</string>
+    <string name="title_dribbl">过人</string>
+    <string name="title_pass">传球</string>
+    <!-- 一线阵容-->
+    <string name="title_card">比赛阵容</string>
+    <string name="title_forward">前锋</string>
+    <string name="title_midfield">中场</string>
+    <string name="title_guard">后卫</string>
+    <string name="title_cesar">门将</string>
+
+    <string name="title_player">球员</string>
+    <string name="title_rank">排名</string>
+    <string name="title_shoot">射门</string>
+    <string name="title_shots_on_goal">射正球门</string>
+    <string name="title_playing_time">出场时间</string>
+    <string name="title_reserves">预备队</string>
+    <string name="title_coaching_staff">教练组</string>
+    <string name="title_description">简介</string>
+    <string name="title_the_team_culture">球队文化</string>
+    <string name="title_bolton_fans_club">球迷会</string>
+
+    <string name="title_on_shenxin">关于申鑫</string>
+    <string name="title_famous_people">著名人物</string>
+    <string name="title_honour">荣誉/记录</string>
+    <string name="title_chinese_team">中文队名:</string>
+    <string name="title_foreign_team">外文队名:</string>
+    <string name="title_sports">运动项目:</string>
+    <string name="title_compete_for_the_event">角逐赛事:</string>
+    <string name="title_district">所属地区:</string>
+    <string name="title_formed">成立时间:</string>
+    <string name="title_stadium">主场馆:</string>
+    <string name="title_galleryful">容纳人数:</string>
+    <string name="title_owner">拥有者:</string>
+    <string name="title_capello">现任主教练:</string>
+    <string name="title_history_of_the_manager">历史主教练:</string>
+    <string name="title_base_on_football">基地足球</string>
+    <string name="title_compete_for_the_base">角逐基地</string>
+    <string name="title_business">商务</string>
+    <string name="title_team_history">球队历史</string>
+</resources>

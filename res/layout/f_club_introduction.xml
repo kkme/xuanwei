@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RadioGroup android:id="@id/rg_group"
+                android:layout_width="match_parent" android:layout_height="@dimen/title_team_head_height"
+                android:background="@drawable/lunbo_one"
+                android:padding="20px"
+                android:paddingLeft="10px"
+                android:paddingRight="10px"
+                android:orientation="horizontal" android:scrollbars="none">
+        <RadioButton android:id="@id/rbtn_left_menu_0"  style="@style/rb_a_team" android:text="@string/title_on_shenxin" />
+        <RadioButton android:id="@id/rbtn_left_menu_1"  style="@style/rb_a_team" android:text="@string/title_famous_people"/>
+        <RadioButton android:id="@id/rbtn_left_menu_2"  style="@style/rb_a_team" android:text="@string/title_bolton_fans_club"/>
+    </RadioGroup>
+    <TableLayout android:layout_width="wrap_content" android:layout_height="0px" android:showDividers="middle"
+                android:divider="@drawable/ls_divider" android:clickable="false" android:focusableInTouchMode="false"
+                android:layout_weight="1" android:background="@drawable/shen_bg"  android:orientation="horizontal">
+            <TableRow >
+                <TextView android:layout_width="120dp" android:textSize="45px"
+                          android:textColor="@color/team_title_fc"
+                          android:padding="10px"
+                          android:gravity="center_vertical|right"
+                          android:text="@string/title_chinese_team"/>
+                <TextView  android:gravity="center_vertical|left"
+                           android:text="上海申鑫足球俱乐部"
+                           android:textSize="45px"
+                           android:padding="10px"
+                           android:layout_width="match_parent"
+                           android:textColor="@android:color/white" />
+            </TableRow>
+            <TableRow >
+                <TextView android:layout_width="80dp" android:textSize="45px"
+                          android:textColor="@color/team_title_fc"
+                          android:padding="10px"
+                          android:gravity="center_vertical|right"
+                          android:text="@string/title_foreign_team"/>
+                <TextView  android:gravity="center_vertical|left"
+                           android:text="Shanghai Shenxin Football Club"
+                           android:textSize="45px"
+                           android:padding="10px"
+                           android:layout_width="match_parent"
+                           android:textColor="@android:color/white" />
+            </TableRow>
+            <TableRow >
+                <TextView android:layout_width="80dp" android:textSize="45px"
+                          android:textColor="@color/team_title_fc"
+                          android:padding="10px"
+                          android:gravity="center_vertical|right"
+                          android:text="@string/title_sports"/>
+                <TextView  android:gravity="center_vertical|left"
+                           android:text="足球"
+                           android:textSize="45px"
+                           android:padding="10px"
+                           android:layout_width="match_parent"
+                           android:textColor="@android:color/white" />
+            </TableRow>
+            <TableRow >
+                <TextView android:layout_width="80dp" android:textSize="45px"
+                          android:textColor="@color/team_title_fc"
+                          android:padding="10px"
+                          android:gravity="center_vertical|right"
+                          android:text="@string/title_compete_for_the_event"/>
+                <TextView  android:gravity="center_vertical|left"
+                           android:text="中国足球超级联赛"
+                           android:textSize="45px"
+                           android:padding="10px"
+                           android:layout_width="match_parent"
+                           android:textColor="@android:color/white" />
+            </TableRow>
+            <TableRow >
+                <TextView android:layout_width="80dp" android:textSize="45px"
+                          android:textColor="@color/team_title_fc"
+                          android:padding="10px"
+                          android:gravity="center_vertical|right"
+                          android:text="@string/title_district"/>
+                <TextView  android:gravity="center_vertical|left"
+                           android:text="中国上海"
+                           android:textSize="45px"
+                           android:padding="10px"
+                           android:layout_width="match_parent"
+                           android:textColor="@android:color/white" />
+            </TableRow>
+            <TableRow >
+                <TextView android:layout_width="80dp" android:textSize="45px"
+                          android:textColor="@color/team_title_fc"
+                          android:padding="10px"
+                          android:gravity="center_vertical|right"
+                          android:text="@string/title_formed"/>
+                <TextView  android:gravity="center_vertical|left"
+                           android:text="2003年初"
+                           android:textSize="45px"
+                           android:padding="10px"
+                           android:layout_width="match_parent"
+                           android:textColor="@android:color/white" />
+            </TableRow>
+        <TableRow >
+            <TextView android:layout_width="80dp" android:textSize="45px"
+                      android:textColor="@color/team_title_fc"
+                      android:padding="10px"
+                      android:gravity="center_vertical|right"
+                      android:text="@string/title_stadium"/>
+            <TextView  android:gravity="center_vertical|left"
+                       android:text="上海金山体育场"
+                       android:textSize="45px"
+                       android:padding="10px"
+                       android:layout_width="match_parent"
+                       android:textColor="@android:color/white" />
+        </TableRow>
+        <TableRow >
+            <TextView android:layout_width="80dp" android:textSize="45px"
+                      android:textColor="@color/team_title_fc"
+                      android:padding="10px"
+                      android:gravity="center_vertical|right"
+                      android:text="@string/title_galleryful"/>
+            <TextView  android:gravity="center_vertical|left"
+                       android:text="16000"
+                       android:textSize="45px"
+                       android:padding="10px"
+                       android:layout_width="match_parent"
+                       android:textColor="@android:color/white" />
+        </TableRow>
+        <TableRow >
+            <TextView android:layout_width="80dp" android:textSize="45px"
+                      android:textColor="@color/team_title_fc"
+                      android:padding="10px"
+                      android:gravity="center_vertical|right"
+                      android:text="@string/title_owner"/>
+            <TextView  android:gravity="center_vertical|left"
+                       android:text="徐国良"
+                       android:textSize="45px"
+                       android:padding="10px"
+                       android:layout_width="match_parent"
+                       android:textColor="@android:color/white" />
+        </TableRow>
+        <TableRow >
+            <TextView android:layout_width="80dp" android:textSize="45px"
+                      android:textColor="@color/team_title_fc"
+                      android:padding="10px"
+                      android:gravity="center_vertical|right"
+                      android:text="@string/title_capello"/>
+            <TextView  android:gravity="center_vertical|left"
+                       android:text="成耀东"
+                       android:textSize="45px"
+                       android:padding="10px"
+                       android:layout_width="match_parent"
+                       android:textColor="@android:color/white" />
+        </TableRow>
+        <TableRow >
+            <TextView android:layout_width="80dp" android:textSize="45px"
+                      android:textColor="@color/team_title_fc"
+                      android:padding="10px"
+                      android:gravity="center_vertical|right"
+                      android:text="@string/title_history_of_the_manager"/>
+            <TextView  android:gravity="center_vertical|left"
+                       android:text="蓝色雄鑫，幸运军团，东方"
+                       android:textSize="45px"
+                       android:padding="10px"
+                       android:layout_width="match_parent"
+                       android:textColor="@android:color/white" />
+        </TableRow>
+
+    </TableLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="80dp" android:background="@drawable/club_bg_foot" >
+
+    </LinearLayout>
+</LinearLayout>
