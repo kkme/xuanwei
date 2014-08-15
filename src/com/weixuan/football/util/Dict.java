@@ -14,6 +14,9 @@ public interface Dict {
     final String CLIENT_ID="client_id";
     final String REDIRECT_URI="redirect_uri";
     final String SIGN="sign";
+    final String TEAM_ID="team_id";
+    final String TEAM_A_ID="team_a_id";
+    final String TEAM_B_ID="team_B_id";
 
 
     /**************************    常量   *********************************************/

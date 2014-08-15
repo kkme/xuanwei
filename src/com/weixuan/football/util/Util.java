@@ -17,9 +17,16 @@ import java.util.Date;
  */
 public class Util {
     /************************************************url 请求 解析 method ******************************************************************/
-    public static String jointUrl(String requestApi){
-        StringBuilder builder=new StringBuilder();
-        builder.append(UrlApi.SERVER_IP);
+    /*****
+     *
+     * @param requestApi
+     * @param webModel
+     * @return
+     */
+    public static String jointUrl(String requestApi,String webModel){
+        StringBuilder builder=new StringBuilder(UrlApi.SERVER_IP);
+        builder.append(webModel);
+        builder.append("/");
         builder.append(requestApi);
         return builder.toString();
     }
@@ -34,24 +41,34 @@ public class Util {
           if (isEmpty(url)) return  null;
           url=url.substring(url.indexOf("#")+1);
           String str[]=url.split("&");
-         Token token=null;
+        if (str==null)return null;
+         Token token=new Token();
          String str0[]=null;
-
-        if (str0==null||str0.length!=3)return null;
-
          try {
              for (String s:str){
-                 str0=s.split("&");
+                 str0=s.split("=");
+
                  if (Dict.ACCESS_TOKEN.equals(str0[0])){
                      token.setAccess_token(str0[1]);
                  }else if(Dict.EXPIRES_IN.equals(str0[0])){
-                    //token.setExpires_in(str0[1]);
+                      try {
+                          token.setExpires_in(Long.valueOf(str0[1]));
+                      }catch (Exception e){
+
+                      }
+                 }else if (Dict.REFRESH_TOKEN.equals(str0[0])){
+                      token.setRefresh_token(str0[1]);
+                 }else if(Dict.STATE.equals(str0[0])){
+                     try {
+                         token.setState(Integer.parseInt(str0[1]));
+                     }catch (Exception e){
+                         token.setState(0);
+                     }
                  }
              }
-         }catch (Exception e){
-
-         }finally {
              return token;
+         }catch (Exception e){
+           return null;
          }
 
     }

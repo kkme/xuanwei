@@ -5,14 +5,15 @@ package com.weixuan.football.entity;
  * Created by Hua on 2014/8/2.
  */
 public class Standings {
-    private int  no;//名次
-    private int  session;//场次
-    private int win;//胜场次
-    private int draw;//平场次
-    private int lose;//输场次
+    private Integer  no;//名次
+    private Integer  session;//场次
+    private Integer win;//胜场次
+    private Integer draw;//平场次
+    private Integer lose;//输场次
     private String jsq;//净胜球
-    private int score;//积分
-    private  String team;//球队
+    private Integer score;//积分
+    private  String teamName;//球队
+    private Integer teamId;
 
     @Override
     public String toString() {
@@ -22,49 +23,50 @@ public class Standings {
                 ", win=" + win +
                 ", draw=" + draw +
                 ", lose=" + lose +
-                ", jsq=" + jsq +
+                ", jsq='" + jsq + '\'' +
                 ", score=" + score +
-                ", team='" + team + '\'' +
+                ", teamName='" + teamName + '\'' +
+                ", teamId=" + teamId +
                 '}';
     }
 
-    public int getNo() {
+    public Integer getNo() {
         return no;
     }
 
-    public void setNo(int no) {
+    public void setNo(Integer no) {
         this.no = no;
     }
 
-    public int getSession() {
+    public Integer getSession() {
         return session;
     }
 
-    public void setSession(int session) {
+    public void setSession(Integer session) {
         this.session = session;
     }
 
-    public int getWin() {
+    public Integer getWin() {
         return win;
     }
 
-    public void setWin(int win) {
+    public void setWin(Integer win) {
         this.win = win;
     }
 
-    public int getDraw() {
+    public Integer getDraw() {
         return draw;
     }
 
-    public void setDraw(int draw) {
+    public void setDraw(Integer draw) {
         this.draw = draw;
     }
 
-    public int getLose() {
+    public Integer getLose() {
         return lose;
     }
 
-    public void setLose(int lose) {
+    public void setLose(Integer lose) {
         this.lose = lose;
     }
 
@@ -76,19 +78,27 @@ public class Standings {
         this.jsq = jsq;
     }
 
-    public int getScore() {
+    public Integer getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 
-    public String getTeam() {
-        return team;
+    public String getTeamName() {
+        return teamName;
     }
 
-    public void setTeam(String team) {
-        this.team = team;
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public Integer getTeamId() {
+        return teamId;
+    }
+
+    public void setTeamId(Integer teamId) {
+        this.teamId = teamId;
     }
 }

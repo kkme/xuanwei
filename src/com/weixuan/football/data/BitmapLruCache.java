@@ -6,9 +6,8 @@ package com.weixuan.football.data;
 
 import android.graphics.Bitmap;
 import android.support.v4.util.LruCache;
-import com.android.volley.toolbox.ImageLoader;
 
-public class BitmapLruCache extends LruCache<String, Bitmap> implements ImageLoader.ImageCache {
+public class BitmapLruCache extends LruCache<String, Bitmap> {
 	public BitmapLruCache(int maxSize) {
 		super(maxSize);
 	}
@@ -18,7 +17,7 @@ public class BitmapLruCache extends LruCache<String, Bitmap> implements ImageLoa
 		return bitmap.getRowBytes() * bitmap.getHeight();
 	}
 
-	@Override
+	/*@Override
 	public Bitmap getBitmap(String url) {
 		return get(url);
 	}
@@ -26,5 +25,5 @@ public class BitmapLruCache extends LruCache<String, Bitmap> implements ImageLoa
 	@Override
 	public void putBitmap(String url, Bitmap bitmap) {
 		put(url, bitmap);
-	}
+	}*/
 }

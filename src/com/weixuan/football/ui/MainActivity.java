@@ -4,34 +4,35 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
+import com.alibaba.fastjson.JSON;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
+import com.litesuits.http.LiteHttpClient;
+import com.litesuits.http.async.HttpAsyncExecutor;
+import com.litesuits.http.request.Request;
+import com.litesuits.http.request.param.HttpMethod;
+import com.litesuits.http.response.Response;
 import com.weixuan.football.R;
-import com.weixuan.football.data.ApiParams;
-import com.weixuan.football.data.RequestManager;
+import com.weixuan.football.entity.Token;
 import com.weixuan.football.fragment.LeftMenuFragment;
-import com.weixuan.football.fragment.NewsFragment;
 import com.weixuan.football.fragment.NewsMainFragment;
 import com.weixuan.football.util.Dict;
 import com.weixuan.football.util.UrlApi;
 import com.weixuan.football.util.Util;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class MainActivity extends SlidingFragmentActivity {
+
+    private static final String TAG="tests";
     public SlidingMenu mSlidingMenu;
     private Fragment newFragment;
     private LeftMenuFragment mFrag;
     private View vLeftMenu;
     private Activity activity;
+    private FootballApplication application;
+
+    private LiteHttpClient client;
+    private HttpAsyncExecutor asyncExecutor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,8 +40,18 @@ public class MainActivity extends SlidingFragmentActivity {
         initSlidingMenu(savedInstanceState);
         setContentView(R.layout.main);
         initView();
+        application=(FootballApplication)getApplication();
         activity=this;
-        requestTask();
+        client=LiteHttpClient.getInstance(activity);
+        asyncExecutor=HttpAsyncExecutor.newInstance(client);
+         new Thread(new Runnable() {
+           @Override
+           public void run() {
+               requestUserTokenTask();
+               requestRefreshTokenTask();
+           }
+       }).start();
+
     }
 
     private void initView(){
@@ -52,25 +63,46 @@ public class MainActivity extends SlidingFragmentActivity {
             }
         });
     }
-    private StringRequest request;
-    private void requestTask(){
-        Map<String,String> params=new HashMap<String, String>();
-        params.put(Dict.CLIENT_ID,Dict.USER_NAME);
-        params.put(Dict.SIGN, Dict.SIGN_CODE);
-        params.put(Dict.REDIRECT_URI,Dict.URL);
-        params.put(Dict.STATE,"1234");
-        request=new StringRequest(Request.Method.POST, Util.jointUrl(UrlApi.AUTHORIZE),responseListener(),errorListener(),params);
-        executeRequest(request);
+
+    /***
+     *授权验证
+     */
+    private void requestUserTokenTask(){
+        Request req = new Request(Util.jointUrl(UrlApi.AUTHORIZE,UrlApi.WEB_MODEL_BASE)).setMethod(HttpMethod.Get).
+                addUrlParam(Dict.CLIENT_ID, Dict.USER_NAME)
+                .addUrlParam(Dict.SIGN, Dict.SIGN_CODE).
+                addUrlParam(Dict.REDIRECT_URI, Dict.URL).
+                 addUrlParam(Dict.STATE, "1234");
+        Response res = client.execute(req);
+       try {
+           Token token=Util.convertToken(req.getUrl().toString());
+            token.setClient_id(Dict.USER_NAME);
+           application.setToken(token);
+       }catch (Exception e){
+       }
 
     }
 
-    private Response.Listener<String> responseListener() {
-        return new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
+    /***
+     *Token 过期验证
+     */
+    private void requestRefreshTokenTask(){
+        Request req = new Request(Util.jointUrl(UrlApi.ACCESS_TOKEN,UrlApi.WEB_MODEL_BASE)).setMethod(HttpMethod.Get).
+                addUrlParam(Dict.CLIENT_ID,application.getToken().getClient_id())
+                .addUrlParam(Dict.REFRESH_TOKEN,application.getToken().getRefresh_token());
+        Response  response=client.execute(req);
+
+        if (!Util.isEmpty(response.getString())){
+            try {
+                Token token=new Token();
+                token=JSON.parseObject(response.getString(),Token.class);
+                application.getToken().setAccess_token(token.getAccess_token());
+                application.getToken().setExpires_in(token.getExpires_in());
+                application.getToken().setRefresh_token(token.getRefresh_token());
+            }catch (Exception e){
 
             }
-        };
+        }
     }
 
     private void initSlidingMenu(Bundle savedInstanceState) {
@@ -138,21 +170,13 @@ public class MainActivity extends SlidingFragmentActivity {
     @Override
     public void onStop() {
         super.onStop();
-        RequestManager.cancelAll(activity);
     }
 
-    protected void executeRequest(Request<?> request) {
-        RequestManager.addRequest(request, this);
-    }
 
-    protected Response.ErrorListener errorListener() {
-        return new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e("football","程序异常信息:"+error.getMessage());
-                Toast.makeText(MainActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        };
+    private void printLog(Response response) {
+        if (response.getString() != null) com.litesuits.android.log.Log.i(TAG, "http result lengh : " + response.getString().length());
+        com.litesuits.android.log.Log.v(TAG, "http result :\n " + response.getString());
+        com.litesuits.android.log.Log.d(TAG, response.toString());
     }
 
 }

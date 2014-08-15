@@ -27,7 +27,7 @@ import java.util.TimerTask;
  * 新闻/公告
  *
  */
-public class NewsMainFragment extends Fragment{
+public class NewsMainFragment extends BaseFragment{
 
     private SwipeRefreshLayout srl_refresh;
     private ListView lsData;
@@ -75,7 +75,8 @@ public class NewsMainFragment extends Fragment{
      * @param view
      * @param inflater
      */
-	private void initView(final View view, LayoutInflater inflater) {
+    @Override
+	public void initView(final View view, LayoutInflater inflater) {
         tv_title=(TextView)view.findViewById(R.id.tv_title);
         ll_lunbo=(LinearLayout)view.findViewById(R.id.ll_lunbo);
         ll_lunbo_page=(LinearLayout)view.findViewById(R.id.ll_lunbo_page);

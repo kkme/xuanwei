@@ -12,7 +12,7 @@ public class Token {
     private String sign;
     private Integer state;
     private String refresh_token;
-    private Date expires_in;//授权码过期时间
+    private long expires_in;//授权码过期时间
 
     @Override
     public String toString() {
@@ -75,11 +75,11 @@ public class Token {
         this.refresh_token = refresh_token;
     }
 
-    public Date getExpires_in() {
+    public long getExpires_in() {
         return expires_in;
     }
 
-    public void setExpires_in(Date expires_in) {
+    public void setExpires_in(long expires_in) {
         this.expires_in = expires_in;
     }
 }
