@@ -4,28 +4,17 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/title_team_head_height"
-                  android:background="@drawable/lunbo_one"
-                  android:orientation="horizontal">
-        <Spinner android:id="@id/spinner_team"
-                 android:layout_marginLeft="20px"
-                 android:layout_width="80dp"
-                 android:spinnerMode="dropdown"
-                 android:padding="10px"
-                 android:dropDownVerticalOffset="@dimen/dropDownVerticalOffset"
-                 android:popupBackground="@color/spinner_item_bg"
-                 android:background="@android:color/transparent"
-                 android:layout_gravity="center_vertical"
-                 android:layout_height="wrap_content" />
-        <ImageView
-                android:id="@id/iv_against_icon0"
-                android:src="@drawable/select"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="15px"
-                android:layout_marginLeft="-50px"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-    </LinearLayout>
-    <ImageView android:layout_width="match_parent" android:layout_height="120dp"/>
 
+    <RadioGroup android:id="@id/rg_group"
+                android:layout_width="match_parent" android:layout_height="@dimen/title_team_head_height"
+                android:background="@drawable/lunbo_one"
+                android:padding="20px"
+                android:paddingLeft="10px"
+                android:paddingRight="10px"
+                android:orientation="horizontal" android:scrollbars="none">
+        <RadioButton android:id="@id/rbtn_left_menu_0"  style="@style/rb_a_team" android:text="@string/title_history_list" />
+        <RadioButton android:id="@id/rbtn_left_menu_1"  style="@style/rb_a_team" android:text="@string/title_cue_list"/>
+        <RadioButton android:id="@id/rbtn_left_menu_2"  style="@style/rb_a_team" android:text="@string/title_scoring_list"/>
+    </RadioGroup>
+    <FrameLayout android:id="@id/fl_m_content" android:layout_width="match_parent" android:layout_height="match_parent"></FrameLayout>
 </LinearLayout>

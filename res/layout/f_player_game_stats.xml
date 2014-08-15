@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RadioGroup android:id="@id/rg_group"
+                android:layout_width="match_parent" android:layout_height="@dimen/title_team_head_height"
+                android:background="@drawable/lunbo_one"
+                android:padding="20px"
+                android:paddingLeft="10px"
+                android:paddingRight="10px"
+                android:orientation="horizontal" android:scrollbars="none">
+        <Spinner android:id="@id/spinner_round"
+                 android:layout_alignParentRight="true"
+                 android:layout_width="wrap_content"
+                 android:spinnerMode="dropdown"
+                 android:dropDownVerticalOffset="@dimen/dropDownVerticalOffset"
+                 android:paddingRight="10px"
+                 android:layout_centerVertical="true"
+                 android:popupBackground="@color/spinner_item_bg"
+                 android:layout_gravity="center_vertical"
+                 android:background="@android:color/transparent"
+                 android:scrollbars="none"
+                 android:layout_height="wrap_content" />
+        <ImageView
+                android:layout_alignRight="@id/spinner_round"
+                android:id="@id/iv_against_icon0"
+                android:src="@drawable/select"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical|right"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15px"
+                android:layout_height="wrap_content"/>
+        <RadioButton android:id="@id/rbtn_left_menu_0"  style="@style/rb_a_team" android:text="@string/title_regular" />
+        <RadioButton android:id="@id/rbtn_left_menu_1"  style="@style/rb_a_team" android:text="@string/title_attack"/>
+        <RadioButton android:id="@id/rbtn_left_menu_2"  style="@style/rb_a_team" android:text="@string/title_defend"/>
+        <RadioButton android:id="@id/rbtn_left_menu_3"  style="@style/rb_a_team" android:text="@string/title_stamina"/>
+    </RadioGroup>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent" android:layout_height="@dimen/title_head_height"
+                  android:orientation="horizontal"
+                  android:background="@drawable/title_vs">
+        <TextView android:text="@string/title_round" style="@style/team_title"  android:layout_weight="1" />
+        <include  layout="@layout/public_divider_view"/>
+        <TextView android:text="@string/title_appear" style="@style/team_title" android:layout_weight="1"/>
+        <include  layout="@layout/public_divider_view"/>
+        <TextView  android:text="@string/title_time" style="@style/team_title" android:layout_weight="1"/>
+        <include  layout="@layout/public_divider_view"/>
+        <TextView  android:text="@string/title_pass" style="@style/team_title" android:layout_weight="1"/>
+        <include  layout="@layout/public_divider_view"/>
+        <TextView  android:text="@string/title_dribbl" style="@style/team_title" android:layout_weight="1"/>
+    </LinearLayout>
+    <include layout="@layout/public_listview_n" />
+</LinearLayout>

@@ -56,12 +56,13 @@
             android:background="@drawable/title_vs">
         <TextView android:text="@string/title_rank" style="@style/team_title"/>
         <include  layout="@layout/public_divider_view"/>
-        <TextView android:text="@string/title_player" style="@style/team_title"/>
+        <TextView android:text="@string/title_player" style="@style/team_title" android:layout_weight="1.2"/>
         <include  layout="@layout/public_divider_view"/>
         <TextView android:text="@string/title_shoot" style="@style/team_title"/>
         <include  layout="@layout/public_divider_view"/>
-        <TextView android:text="@string/title_shots_on_goal" style="@style/team_title"/>
+        <TextView android:text="@string/title_shots_on_goal" style="@style/team_title" android:layout_weight="1.6"/>
         <include  layout="@layout/public_divider_view"/>
-        <TextView android:text="@string/title_playing_time" style="@style/team_title"/>
+        <TextView android:text="@string/title_playing_time" style="@style/team_title" android:layout_weight="1.6"/>
     </LinearLayout>
+    <include layout="@layout/public_listview_n" />
 </LinearLayout>

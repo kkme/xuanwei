@@ -6,8 +6,8 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
     <TextView android:id="@id/tv_item_0" style="@style/list_item"
-
-              android:background="@drawable/shape_scoreboad"  android:textColor="@color/left_list_fc"  android:layout_weight="0.9"/>
+               android:layout_weight="0"  android:layout_width="26dp"
+              android:background="@drawable/shape_scoreboad"  android:textColor="@color/left_list_fc" />
     <TextView  android:id="@id/tv_item_1" style="@style/list_item" android:layout_weight="1.8"/>
     <TextView android:id="@id/tv_item_2" style="@style/list_item"  />
     <TextView  android:id="@id/tv_item_3" style="@style/list_item"/>

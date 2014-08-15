@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:padding="5px"
+              android:paddingRight="20px"
+              android:paddingBottom="20px"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <TextView android:id="@id/tv_item_0" style="@style/list_item"  />
+    <TextView  android:id="@id/tv_item_1" style="@style/list_item" />
+    <TextView  android:id="@id/tv_item_2" style="@style/list_item" android:layout_weight="1.2"/>
+    <TextView  android:id="@id/tv_item_3" style="@style/list_item"  android:layout_weight="1.6"/>
+    <TextView   android:id="@id/tv_item_4" style="@style/list_item" android:layout_weight="1.6" />
+</LinearLayout>

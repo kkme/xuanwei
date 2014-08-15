@@ -23,6 +23,10 @@
     <string name="title_lanqiu">实况数据</string>
     <string name="title_live_data">文字直播</string>
 
+    <string name="title_game_stats">比赛数据</string>
+    <string name="title_records">履历</string>
+
+
 
     <!-- 赛事分析  选择 -->
     <string name="rb_choose_1">进攻对比</string>
@@ -36,6 +40,7 @@
     <string name="rb_tab_4">积分榜</string>
 
     <string name="vs">双方历史共交战12次，申鑫胜4次 平五次 负三次</string>
+    <string name="title_event_Result">赛果</string>
     <string name="title_event">赛事</string>
     <string name="title_season">赛季</string>
     <string name="title_round">轮次</string>
@@ -99,4 +104,36 @@
     <string name="title_compete_for_the_base">角逐基地</string>
     <string name="title_business">商务</string>
     <string name="title_team_history">球队历史</string>
+
+
+    <string name="title_history_list">历史名单</string>
+    <string name="title_cue_list">出场榜</string>
+    <string name="title_scoring_list">进球榜</string>
+
+    <string name="title_number">号码</string>
+    <string name="title_name">姓名</string>
+    <string name="title_location">位置</string>
+    <string name="title_effect_time">效力时间</string>
+    <string name="title_cumulative_score">累计进球</string>
+
+    <string name="title_super">中超</string>
+    <string name="title_other_tournament">其他赛事</string>
+    <string name="title_play_list">出场榜单</string>
+    <string name="title_number_of_appearances">出场数</string>
+    <string name="title_year_of_validity">效力年份</string>
+    <string name="title_average_exit">平均出场</string>
+    <string name="title_scoring_list_0">进球榜单</string>
+
+    <string name="title_english_name">英文名：</string>
+    <string name="title_nationality">国籍：</string>
+    <string name="title_birthplace">出生地：</string>
+    <string name="title_hright">身高：</string>
+    <string name="title_weight">体重：</string>
+    <string name="title_birthday">生日：</string>
+    <string name="title_age">年龄：</string>
+    <string name="title_location_">位置：</string>
+    <string name="title_midtarsal">左右脚：</string>
+    <string name="title_jersey_number">球衣号码：</string>
+
+
 </resources>

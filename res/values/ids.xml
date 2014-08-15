@@ -11,6 +11,7 @@
     <!-- 赛事分析   id -->
     <item name="fl_m_content" type="id" />
     <item name="fl_news_content" type="id" />
+    <item name="fl_view" type="id" />
     <!-- RadioGroup  id -->
     <item name="rg_group_m" type="id" />
     <!-- RadioGroup RadioButton  id -->
@@ -76,6 +77,10 @@
     <item name="tv_item_5" type="id" />
     <item name="tv_item_6" type="id" />
     <item name="tv_item_7" type="id" />
+    <item name="tv_item_8" type="id" />
+    <item name="tv_item_9" type="id" />
+    <item name="tv_item_10" type="id" />
+    <item name="tv_item_11" type="id" />
     <!-- imageView id   view 共用-->
     <item name="iv_item_0" type="id" />
     <item name="iv_item_1" type="id" />

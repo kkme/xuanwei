@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+   <ImageView  android:id="@id/iv_item_0"  android:scaleType="fitXY"
+               android:src="@drawable/icon_team_2014"
+               android:layout_width="match_parent"
+               android:background="@color/red"
+               android:layout_height="120dip"/>
+    <RelativeLayout android:layout_width="match_parent"  android:orientation="horizontal"
+                    android:background="@drawable/title_m_s"
+                    android:layout_height="@dimen/title_head_height">
+              <TextView  android:text="@string/title_history_list"  android:layout_centerVertical="true"
+                           android:textSize="@dimen/font_size_16"
+                           android:textColor="@android:color/white"
+                           android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <Spinner android:id="@id/spinner_round"
+                     android:layout_alignParentRight="true"
+                     android:layout_width="wrap_content"
+                     android:spinnerMode="dropdown"
+                     android:dropDownVerticalOffset="@dimen/dropDownVerticalOffset"
+                     android:paddingRight="20dp"
+                     android:layout_marginRight="15dp"
+                     android:layout_centerVertical="true"
+                     android:popupBackground="@color/spinner_item_bg"
+                     android:layout_gravity="center_vertical"
+                     android:background="@android:color/transparent"
+                     android:scrollbars="none"
+                     android:layout_height="wrap_content" />
+            <ImageView
+                    android:layout_alignRight="@id/spinner_round"
+                    android:id="@id/iv_against_icon0"
+                    android:src="@drawable/select"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20px"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="wrap_content"/>
+           </RelativeLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/title_head_height"
+                  android:orientation="horizontal"
+                  android:background="@drawable/schedule_title_bg">
+        <TextView android:text="@string/title_number" style="@style/schedule_title"  />
+        <include layout="@layout/public_divider_view" />
+        <TextView android:text="@string/title_name"   style="@style/schedule_title" />
+        <include layout="@layout/public_divider_view" />
+        <TextView android:text="@string/title_location"   style="@style/schedule_title"  />
+        <include layout="@layout/public_divider_view" />
+        <TextView android:text="@string/title_effect_time"   style="@style/schedule_title"   android:layout_weight="2"/>
+        <include layout="@layout/public_divider_view" />
+        <TextView android:text="@string/title_cumulative_score"    style="@style/schedule_title"   android:layout_weight="2"/>
+    </LinearLayout>
+    <include  layout="@layout/public_listview_n"/>
+</LinearLayout>

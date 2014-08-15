@@ -18,7 +18,7 @@
         <item name="android:layout_weight">1</item>
         <item name="android:layout_height">match_parent</item>
 
-        <item name="android:textSize">40px</item>
+        <item name="android:textSize">@dimen/font_size_15</item>
         <item name="android:button">@null</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/s_team_title</item>
@@ -61,19 +61,21 @@
 
    <!--- 球队图标icon  -->
     <style name="team_icon">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">55dip</item>
+        <item name="android:layout_width">62dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:scaleType">centerInside</item>
     </style>
     <style name="team_ll_icon">
         <item name="android:layout_width">70dip</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:orientation">vertical</item>
+        <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
     <style name="schedule_title">
         <item name="android:layout_height">match_parent</item>
         <item name="android:padding">20px</item>
-        <item name="android:textSize">50px</item>
+        <item name="android:textSize">@dimen/font_size_15</item>
         <item name="android:layout_width">0px</item>
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center</item>
@@ -101,13 +103,44 @@
     <style name="list_item">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">false</item>
-        <item name="android:padding">2px</item>
-        <item name="android:textSize">@dimen/font_size_14</item>
+        <item name="android:textSize">@dimen/font_size_12</item>
         <item name="android:layout_width">0px</item>
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
+
+    <style name="style_team_row_a_right">
+         <item name="android:gravity">right</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/font_size_15</item>
+    </style>
+
+    <style name="style_team_row_a_left">
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/font_size_15</item>
+    </style>
+
+
+    <style name="style_info_left" parent="style_ww">
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/font_size_15</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:padding">10px</item>
+        <item name="android:paddingBottom">10px</item>
+        <item name="android:paddingTop">10px</item>
+    </style>
+    <style name="style_info_right" parent="style_ww">
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@color/left_list_fc</item>
+        <item name="android:textSize">@dimen/font_size_15</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingBottom">10px</item>
+        <item name="android:paddingTop">10px</item>
+    </style>
+
 
 
     <!-- 新闻公告 头像-->
@@ -125,7 +158,7 @@
     <style name="style_item_wrap" parent="style_ww">
         <item name="android:orientation">horizontal</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:textSize">@dimen/font_size_14</item>
         <item name="android:gravity">center</item>
         <item name="android:padding">8px</item>
         <item name="android:layout_gravity">center_vertical</item>
